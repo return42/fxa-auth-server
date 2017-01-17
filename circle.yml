@@ -63,6 +63,6 @@ test:
   override:
     - cd fxa-js-client && npm run test-local
 
-    - cd fxa-content-server && retry -n 1 -- node_modules/.bin/intern-runner config=tests/intern_functional_circle firefoxBinary=$HOME/fxa-auth-server/firefox/firefox fxaProduction=true fxaDevBox=true:
+    - cd fxa-content-server && retry -n 1 -- node_modules/.bin/intern-runner config=tests/intern_functional_circle firefoxBinary=$HOME/fxa-auth-server/firefox/firefox fxaProduction=true fxaAuthRoot=http://127.0.0.1:9000/v1 fxaEmailRoot=http://127.0.0.1:9001 fxaOauthApp=http://127.0.0.1:8080:
         parallel: true
 
