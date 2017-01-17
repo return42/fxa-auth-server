@@ -20,7 +20,7 @@ dependencies:
     - sudo apt-get install graphicsmagick
     - cd fxa-profile-server && npm i --production
 
-    - git clone --depth 1 https://github.com/mozilla/browserid-verifier
+    - git clone --depth 1 --branch http https://github.com/vladikoff/browserid-verifier
     - cd browserid-verifier && npm i --production
 
     - pip install mozdownload mozinstall
